@@ -1,0 +1,1 @@
+This is a soon to be blog post that has index pages (campaign,landing pages, emails, forms, and segments) to pull data on page load using Jquery to connect to a JSONP file then iterate through the data posting each new element to the DOM.

@@ -1,0 +1,46 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>          
+	        <title>FedEx Day | Whats New Forms Page Blog</title>
+	        <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8" />
+	        <link href="../../css/whatsNew.css" type="text/css" rel="stylesheet" />                                
+	</head>
+	<body>
+        
+    <div id="container">
+      <div id="header">
+        <div class="company">Eloqua</div>
+        <div class="title">Forms: What's New?</div>
+      </div>
+      <ul id="blog"></ul>
+    </div>
+
+	      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.js" charset="utf-8"></script>
+	      <script type="text/javascript">
+	      
+	        var blog;
+	        
+  	      function whatsNew(data) {
+				
+      				data.form.forEach(function(o) {
+      				  blog = "<li class='" + o.type + "'>" + 
+      				            "<div class='title'>" + o.title + "</div>" +
+      				            "<div class='description'>" + o.description + "</div>" +
+      				            "<div class='date'>" + o.date + "</div>" +
+      				          "</li>";
+      				  $('#blog').append(blog);
+      				});		  
+  	      }
+  	      var url = "../../whatsNew.json",
+              script = document.createElement('script');
+              
+          script.setAttribute('src', url);
+
+          // load the script
+          document.getElementsByTagName('head')[0].appendChild(script);
+
+	      </script>
+
+
+	</body>
+</html>
